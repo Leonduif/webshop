@@ -1,7 +1,10 @@
-# webshop
-Webshop with React and TS
+# Webshop
+Using React and TS
 
 Install:
-- npm install
-- npm run dev
-- Check localhost:3000
+### `npm install`
+
+Run dev:
+### `npm run dev`
+
+Then check localhost:3000
