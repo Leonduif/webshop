@@ -2,8 +2,11 @@ import { Theme } from "@emotion/react";
 
 const theme: Theme = {
   colors: {
-    accentColor: "hotpink",
-    primaryColor: "aqua",
+    primary: "#30bced",
+    secondary: "#303036",
+    white: "#fffaff",
+    standout: "#fc5130",
+    black: "#050401",
   },
 };
 
