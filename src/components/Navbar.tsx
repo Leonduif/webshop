@@ -24,16 +24,18 @@ const NavbarLink = styled(NavLink)`
   display: block;
   padding: 0.5rem;
   font-size: 1.2rem;
+  color: black;
 
   &.active,
+  &:hover,
   &:active {
     color: ${(props) => props.theme.colors.primary};
   }
 `;
 
 const Nav = styled.nav`
-  background-color: ${(props) => props.theme.colors.white};
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  background-color: white;
 `;
 
 const Ul = styled(Wrap)`

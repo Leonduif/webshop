@@ -1,5 +1,6 @@
 import ProductItem from "../components/ProductItem";
 import ProductList from "../components/ProductList";
+import Title from "../components/Title";
 import items from "./../data/items.json";
 
 export type Item = {
@@ -12,7 +13,7 @@ export type Item = {
 function Store() {
   return (
     <>
-      <h1>Store</h1>
+      <Title>Store</Title>
       <ProductList items={items} />
     </>
   );
