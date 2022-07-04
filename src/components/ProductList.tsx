@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Item } from "../pages/Store";
+import { media } from "../style/theme";
 import ProductItem from "./ProductItem";
 
 type ProductListProps = {
@@ -15,13 +16,14 @@ const Container = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  @media only screen and (min-width: 700px) {
+
+  ${media.mobile} {
     display: grid;
     flex-direction: row;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media only screen and (min-width: 900px) {
+  ${media.desktop} {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
