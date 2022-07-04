@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useCart } from "../context/CartProvider";
 import convertToCurrency from "../utilities/convertToCurrency";
 import Button from "./Button";
 
@@ -11,6 +12,15 @@ type ProductItemsProps = {
 
 function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
   const quantity = 1;
+  const { addQuantity, removeQuantity } = useCart();
+
+  const handleReduceQuantityClick = () => {
+    removeQuantity(id);
+  };
+
+  const handleAddQuantityClick = () => {
+    addQuantity(id);
+  };
   return (
     <Li>
       <ImgWrapper>
@@ -22,13 +32,13 @@ function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
         <ButtonWrapper>
           {quantity > 0 && (
             <>
-              <Button square>
+              <Button square onClick={handleReduceQuantityClick}>
                 <span className="material-symbols-outlined">remove</span>
               </Button>
               <TextInput type="text" />
             </>
           )}
-          <Button square quantity={quantity}>
+          <Button square quantity={quantity} onClick={handleAddQuantityClick}>
             <span className="material-symbols-outlined">add</span>
           </Button>
         </ButtonWrapper>

@@ -1,10 +1,16 @@
 import styled from "@emotion/styled";
-import { Item } from "../pages/Store";
 import { media } from "../style/theme";
 import ProductItem from "./ProductItem";
 
+export type ProductItemProps = {
+  id: number;
+  name: string;
+  price: number;
+  imgUrl: string;
+};
+
 type ProductListProps = {
-  items: Item[];
+  items: ProductItemProps[];
 };
 
 function ProductList({ items }: ProductListProps) {

@@ -6,22 +6,26 @@ import Navbar from "./components/Navbar";
 import Wrap from "./components/Wrap";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
+import { useState } from "react";
+import { CartProvider } from "./context/CartProvider";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header>
-        <Navbar />
-        <Cart />
-      </Header>
-      <Wrap>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Wrap>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Header>
+          <Navbar />
+          <Cart />
+        </Header>
+        <Wrap>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Wrap>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
