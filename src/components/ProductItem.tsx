@@ -20,15 +20,15 @@ function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
       <ContentWrapper>
         <Name>{name}</Name>
         <ButtonWrapper>
-          {quantity && (
+          {quantity > 0 && (
             <>
               <Button square>
                 <span className="material-symbols-outlined">remove</span>
               </Button>
-              <input type="text" />
+              <TextInput type="text" />
             </>
           )}
-          <Button square>
+          <Button square quantity={quantity}>
             <span className="material-symbols-outlined">add</span>
           </Button>
         </ButtonWrapper>
@@ -36,6 +36,13 @@ function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
     </Li>
   );
 }
+
+const TextInput = styled.input`
+  width: 3rem;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+`;
 
 const Name = styled.span`
   display: block;
@@ -52,7 +59,7 @@ const ButtonWrapper = styled.div`
 
 const ContentWrapper = styled.div`
   background-color: white;
-  padding: 2rem 1rem;
+  padding: 1rem;
   border-radius: 0 0 4px 4px;
 `;
 
@@ -79,9 +86,9 @@ const Price = styled.span`
   top: 1rem;
   right: 1rem;
   font-size: 18px;
-  background-color: white;
-  color: black;
-  padding: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.3rem;
   border-radius: 2px;
 `;
 

@@ -4,7 +4,7 @@ const Wrap = styled.div`
   display: block;
   margin: 0 auto;
   max-width: 60rem;
-  padding: 1.5rem;
+  padding: 2rem;
 `;
 
 export default Wrap;

@@ -41,7 +41,7 @@ const Nav = styled.nav`
 
 const Ul = styled(Wrap)`
   display: flex;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   gap: 0.5rem;
 
   // for optical alignment

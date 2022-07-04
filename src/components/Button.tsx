@@ -3,6 +3,7 @@ import { COLORS } from "../style/theme";
 
 type ButtonProps = {
   square?: boolean;
+  quantity?: number;
 };
 
 const Button = styled.button`
@@ -15,6 +16,8 @@ const Button = styled.button`
   height: ${(props: ButtonProps) => (props.square ? "30px" : "auto")};
   position: relative;
   transition: 0.15s linear background-color;
+  border-radius: 2px;
+  ${(props: ButtonProps) => (props.quantity === 0 ? "margin-left: auto" : "")};
 
   &:hover {
     background-color: #1aa0cf;
