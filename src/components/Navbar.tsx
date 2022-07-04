@@ -5,8 +5,8 @@ import Wrap from "./Wrap";
 
 function Navbar() {
   return (
-    <Nav>
-      <Ul as="ul">
+    <nav>
+      <Wrapper as="ul">
         <li>
           <NavbarLink to="/">Home</NavbarLink>
         </li>
@@ -16,8 +16,8 @@ function Navbar() {
         <li>
           <NavbarLink to="/about">About</NavbarLink>
         </li>
-      </Ul>
-    </Nav>
+      </Wrapper>
+    </nav>
   );
 }
 
@@ -34,14 +34,9 @@ const NavbarLink = styled(NavLink)`
   }
 `;
 
-const Nav = styled.nav`
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-  background-color: white;
-`;
-
-const Ul = styled(Wrap)`
+const Wrapper = styled(Wrap)`
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0;
   gap: 0.5rem;
 
   // for optical alignment

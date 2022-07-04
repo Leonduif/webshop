@@ -4,11 +4,16 @@ import Store from "./pages/Store";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Wrap from "./components/Wrap";
+import Cart from "./components/Cart";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header>
+        <Navbar />
+        <Cart />
+      </Header>
       <Wrap>
         <Routes>
           <Route path="/" element={<Home />} />
