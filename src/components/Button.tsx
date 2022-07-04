@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { COLORS } from "../style/theme";
 
 type ButtonProps = {
   square?: boolean;
@@ -7,7 +8,7 @@ type ButtonProps = {
 const Button = styled.button`
   display: block;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${COLORS.primary};
   padding: 0.7rem;
   color: white;
   width: ${(props: ButtonProps) => (props.square ? "30px" : "auto")};

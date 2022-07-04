@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import { COLORS } from "../style/theme";
 import Wrap from "./Wrap";
 
 function Navbar() {
@@ -29,7 +30,7 @@ const NavbarLink = styled(NavLink)`
   &.active,
   &:hover,
   &:active {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${COLORS.primary};
   }
 `;
 
