@@ -1,6 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { ProductItemProps } from "../components/ProductList";
-import items from "./../data/items.json";
 
 type CartProps = {
   addQuantity: (id: number) => void;
@@ -71,8 +69,6 @@ export function CartProvider({ children }: CartProvider) {
 
   const getItemQuantity = (id: number) =>
     cartItems.find((item) => item.id === id)?.quantity || 0;
-
-  const findItem = (id: number) => items.find((item) => item.id === id);
 
   return (
     <Context.Provider
