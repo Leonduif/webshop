@@ -11,8 +11,8 @@ type ProductItemsProps = {
 };
 
 function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
-  const quantity = 1;
-  const { addQuantity, removeQuantity } = useCart();
+  const { addQuantity, removeQuantity, getItemQuantity } = useCart();
+  const quantity = getItemQuantity(id);
 
   const handleReduceQuantityClick = () => {
     removeQuantity(id);
@@ -35,7 +35,7 @@ function ProductItem({ id, name, price, imgUrl }: ProductItemsProps) {
               <Button square onClick={handleReduceQuantityClick}>
                 <span className="material-symbols-outlined">remove</span>
               </Button>
-              <TextInput type="text" />
+              <TextInput type="text" value={quantity} readOnly />
             </>
           )}
           <Button square quantity={quantity} onClick={handleAddQuantityClick}>

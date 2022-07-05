@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import Wrap from "./components/Wrap";
 import Cart from "./components/Cart";
 import Header from "./components/Header";
-import { useState } from "react";
 import { CartProvider } from "./context/CartProvider";
 
 function App() {
